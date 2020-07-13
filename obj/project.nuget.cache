@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "jMN20lsGo7Vx8Gxpfkd2ogTsXEODyaV9fq89bcdo+KnD40Ydxrte87xCI2iek7HlepdyDRfngwOtVoBZ4VoVig==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\parra\\OneDrive\\Documentos\\Senai\\ProjetoEplayers\\ProjetoEplayers.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\parra\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\3.1.2\\microsoft.aspnetcore.app.ref.3.1.2.nupkg.sha512"
+  ],
+  "logs": []
+}
