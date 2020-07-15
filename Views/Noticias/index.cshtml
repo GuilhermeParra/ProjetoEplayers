@@ -2,8 +2,8 @@
 @{
     ViewData["Title"] =  "Noticias";
 }
-<form action="@Url.Action("Cadastrar")">
-<form action="@Url.Action("Deletar")">
+<form action="@Url.Action("Cadastrar")" method="post"> 
+<form action="@Url.Action("Deletar")" method="reset"> 
 
 <label for="IdNoticias">IdNoticias</label>
 <input type="text" name= "IdNoticias" id="IdNoticias">
@@ -25,6 +25,8 @@
 
 
 
+
+
 <table class="table table-responsive table-striped">
     <thead>
         <th>Id</th>
@@ -32,7 +34,10 @@
         <th>Texto</th>
         <th>Imagem</th>
     </thead>
+   
     <tbody>
+        
+       
         @foreach (var item in ViewBag.Noticias)
         {
             <tr>
@@ -42,5 +47,8 @@
                 <td>@item.Imagem</td>
             </tr>
         }
+        
     </tbody>
+    
 </table>
+ 

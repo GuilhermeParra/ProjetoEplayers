@@ -16,7 +16,7 @@ namespace ProjetoEplayers.Controllers
         }
         public IActionResult Cadastrar(IFormCollection form){
             Noticias noticia = new Noticias();
-            noticia.IdNoticia = Int32.Parse(form["IdEquipe"]);
+            noticia.IdNoticias = Int32.Parse(form["IdNoticias"]);
             noticia.Titulo = form["Titulo"];
             noticia.Texto = form["Texto"];
             noticia.Imagem = form["Imagem"];
