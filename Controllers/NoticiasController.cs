@@ -53,5 +53,10 @@ namespace ProjetoEplayers.Controllers
             return LocalRedirect("~/Noticias");
 
         }
+        [Route("Noticias/{id}")]
+        public IActionResult Excluir(int id){
+            noticiaModel.Delete(id);
+            return LocalRedirect("~/Noticias");
+        }
     }
 }
