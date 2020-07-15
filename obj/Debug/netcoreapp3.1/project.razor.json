@@ -20541,8 +20541,18 @@
       "FileKind": "mvc"
     },
     {
+      "FilePath": "c:\\Users\\parra\\OneDrive\\Documentos\\Senai\\ProjetoEplayers\\Views\\Noticias\\index.cshtml",
+      "TargetPath": "Views\\Noticias\\index.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "c:\\Users\\parra\\OneDrive\\Documentos\\Senai\\ProjetoEplayers\\Views\\_ViewStart.cshtml",
       "TargetPath": "Views\\_ViewStart.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\parra\\OneDrive\\Documentos\\Senai\\ProjetoEplayers\\Views\\Equipe\\index.cshtml",
+      "TargetPath": "Views\\Equipe\\index.cshtml",
       "FileKind": "mvc"
     },
     {
