@@ -25,7 +25,7 @@ namespace ProjetoEplayers.Controllers
             var file    = form.Files[0];
             //patasA, pastaB, pastaC, arquivo.PDF
             //patasA/pastaB/pastaC/arquivo.PDF
-            var folder  = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot/img/Noticias");
+            var folder  = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot/img/Noticia");
 
             if(file != null)
             {
