@@ -2,22 +2,37 @@
 @{
     ViewData["Title"] =  "Noticias";
 }
-<form action="@Url.Action("Cadastrar")" method="post" enctype="multipart/form-data"> 
+
+<div class="titulo_pagina">
+        <h1>cadastro de  @ViewData["Title"]</h1>
+</div>
+
+<form class="cadastro" action="@Url.Action("Cadastrar")" method="post" enctype="multipart/form-data"> 
 <form action="@Url.Action("Deletar")" method="reset"> 
 
+<div class="campo">
 <label for="IdNoticias">IdNoticias</label>
 <input type="text" name= "IdNoticias" id="IdNoticias">
+</div>
 
+<div class="campo">
 <label for="Titulo">Titulo</label>
 <input type="text" name= "Titulo" id="Titulo">
+</div>
 
+<div class="campo">
 <label for="Texto">Texto</label>
 <input type="text" name= "Texto" id="Texto">
+</div>
 
+<div class="campo">
 <label for="Imagem">Imagem</label>
 <input type="file" name= "Imagem" id="Imagem">
+</div>
 
-<button type="submit">Cadastrar</button>
+<div class="campo">
+<button class="gradient btn" type="submit">Cadastrar</button>
+</div>
 
 
 </form>
@@ -45,7 +60,9 @@
                 <td>@item.Titulo</td>
                 <td>@item.Texto</td>
                 <td><img src="img/Noticia/@item.Imagem" alt="Imagem da noticia @item.Titulo"></td>
-                <td><a asp-controller="Noticias" asp-action="Excluir" asp-route-id="@item.IdNoticias">Excluir</a></td>
+                <td><a asp-controller="Noticias" asp-action="Excluir" asp-route-id="@item.IdNoticias">
+                    <i class="fas fa-trash"></i>
+                </a></td>
             </tr>
         }
         
