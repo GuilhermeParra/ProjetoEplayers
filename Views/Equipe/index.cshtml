@@ -2,15 +2,27 @@
 @{
     ViewData["Title"] =  "Equipes";
 }
-<form action="@Url.Action("Cadastrar")" method="post" enctype="multipart/form-data">
+
+<div class="titulo_pagina">
+            <h1>cadastro de  @ViewData["Title"]</h1>
+        </div>
+
+<form class="cadastro" action="@Url.Action("Cadastrar")" method="post" enctype="multipart/form-data">
+
+<div class="campo">
 <label for="IdEquipe">IdEquipe</label>
 <input type="text" name= "IdEquipe" id="IdEquipe">
+</div>
 
+<div class="campo">
 <label for="Nome">Nome</label>
 <input type="text" name= "Nome" id="Nome">
+</div>
 
+<div class="campo">
 <label for="Imagem">Imagem</label>
 <input type="file" name= "Imagem" id="Imagem">
+</div>
 
 <button type="submit">Cadastrar</button>
 </form>
@@ -31,7 +43,9 @@
                 <td>@item.Nome</td>
                 <td><img src="img/Equipes/@item.Imagem" alt="Imagem do time @item.Nome" ></td>
                 <td>
-                    <a asp-controller="Equipe" asp-action="Excluir" asp-route-id="@item.IdEquipe">Excluir</a>
+                    <a asp-controller="Equipe" asp-action="Excluir" asp-route-id="@item.IdEquipe">
+                        <i class="fas fa-trash"></i>
+                    </a>
                 </td>
             </tr>
         }
