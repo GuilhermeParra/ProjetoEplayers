@@ -15,6 +15,7 @@ namespace ProjetoEplayers.Controllers
             ViewBag.Noticias = noticiaModel.ReadAll();
             return View();
         }
+        
         public IActionResult Cadastrar(IFormCollection form){
             Noticias noticia = new Noticias();
             noticia.IdNoticias = Int32.Parse(form["IdNoticias"]);

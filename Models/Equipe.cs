@@ -16,16 +16,29 @@ namespace ProjetoEplayers.Models
         public Equipe(){
             CreateFolderAndFile(PATH);
         }
+        /// <summary>
+        /// Cria um caminho para o CSV
+        /// </summary>
+        /// <param name="e">Objeto de Equipe</param>
         public void Create(Equipe e)
         {
             string[] linhas = {PrepararLinha(e)};
             File.AppendAllLines(PATH, linhas);
         }
 
+        /// <summary>
+        /// Prepara a linha do CSV
+        /// </summary>
+        /// <param name="_e">Objeto de Equipe</param>
+        /// <returns>O Id, o nome e a imagem da equipe</returns>
         private string PrepararLinha(Equipe _e){
             return $"{_e.IdEquipe};{_e.Nome};{_e.Imagem}";
         }
 
+        /// <summary>
+        /// Deleta a linha do CSV
+        /// </summary>
+        /// <param name="IdEquipe">Parametro a ser buscado</param>
         public void Delete(int IdEquipe)
         {
             List<string> linhas = ReadAllLinesCSV(PATH);
@@ -33,6 +46,10 @@ namespace ProjetoEplayers.Models
             RewriteCSV(PATH, linhas);
         }
 
+        /// <summary>
+        /// Le todas as linhas do CSV
+        /// </summary>
+        /// <returns>Lista de equipes</returns>
         public List<Equipe> ReadAll()
         {
            List<Equipe> equipes = new List<Equipe>();
@@ -50,6 +67,10 @@ namespace ProjetoEplayers.Models
             return equipes;
         }
 
+        /// <summary>
+        /// Atualiza as linhas do CSV
+        /// </summary>
+        /// <param name="e">Objeto de equipe</param>
         public void Update(Equipe e)
         {
            List<string> linhas = ReadAllLinesCSV(PATH);
